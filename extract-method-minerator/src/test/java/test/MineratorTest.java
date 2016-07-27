@@ -36,8 +36,32 @@ public class MineratorTest {
 			System.out.print(methodsProject.get(i).getId() + ",");
 			methodsProject.get(i).printNumberOfStatments();
 		}
-		 CsvWriter writer = new CsvWriter("D:\\arq.csv");
-		 writer.write(methodsProject);
+		 CsvWriter writer = new CsvWriter("D:\\arq.csv" , ',', Charset.forName("ISO-8859-1"));
+		
+		 writer.write("comit1");
+		 writer.write("comit2");
+		 writer.write("comit3");
+		 writer.endRecord();
+		 //writer.write("Método1");
+		 writer.write("22");
+		 writer.write("88");
+		 writer.write("188");
+		 writer.endRecord();
+		 //writer.write("Método2");
+		 writer.write("33");
+		 writer.write("44");
+		 writer.write("8");
+		 writer.endRecord();
+		 //writer.write("Método3");
+		 writer.write("88");
+		 writer.write("160");
+		 writer.write("88");
+		 writer.endRecord();
+		 writer.close();
+		 
+		 
+		 
+		 
 	     //objTests.readCSV();
 	     //objTests.fill();
 	     //objTests.writeCSV(methodsProject.toString());
